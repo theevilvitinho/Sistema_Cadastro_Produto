@@ -8,3 +8,10 @@ class Brand(models.Model):
     description = models.TextField(null=True,verbose_name='Descrição')
     created_at = models.DateTimeField(auto_now_add=True,verbose_name='criado em')
     update_at = models.DateTimeField(auto_now_add=True,verbose_name='atualizado em')
+
+    class meta:
+        ordering = ['name',]
+        verbose_name = 'Marca'
+
+    def __str__(self):
+        return self.name
