@@ -9,8 +9,8 @@ class Brand(models.Model):
     created_at = models.DateTimeField(auto_now_add=True, verbose_name='Criado em')
     update_at = models.DateTimeField(auto_now=True, verbose_name='Atualizado em')
 
-    class meta:
-        ordering = ['name',]
+    class Meta:
+        ordering = ['name']
         verbose_name = 'Marca'
 
     def __str__(self):
@@ -24,8 +24,8 @@ class Category(models.Model):
     created_at = models.DateTimeField(auto_now_add=True, verbose_name='Criado em')
     update_at = models.DateTimeField(auto_now=True, verbose_name='Atualizado em')
 
-    class meta:
-        ordering = ['name',]
+    class Meta:
+        ordering = ['name']
         verbose_name = 'Categoria'
 
     def __str__(self):
@@ -42,7 +42,7 @@ class Product(models.Model):
     created_at = models.DateTimeField(auto_now_add=True, verbose_name='Criado em')
     update_at = models.DateTimeField(auto_now=True, verbose_name='Atualizado em')
 
-    class meta:
+    class Meta:
         ordering = ['title']
         verbose_name = 'Produto'
 
